@@ -1,0 +1,16 @@
+************ EDA ************;
+proc freq data = orion.training;
+tables FUEL_TYPE BODY_TYPE TYPE_OF_DRIVE INTERIOR_TYPE TRANSM_TYPE AUTO_CONDITION;
+run;
+proc kde data=ORION.TRAINING;
+   univar ENGINE_VOLUME;
+   title 'Simple KDE procedure';
+run;
+proc kde data=ORION.TRAINING;
+   univar ESTIM_COST;
+   title 'Simple KDE procedure';
+run;
+proc kde data=ORION.TRAINING;
+   univar AVG_COST;
+   title 'Simple KDE procedure';
+run;
